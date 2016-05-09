@@ -1,0 +1,39 @@
+{
+  "name": "electron-screencapture",
+  "version": "1.0.0",
+  "description": "Library that allows to take a picture or a video from any fragment of the display",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "webpack -p --config ./build.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kasprownik/electron-screencapture.git"
+  },
+  "keywords": [
+    "electron",
+    "screenshot",
+    "screencast",
+    "webrtc"
+  ],
+  "author": "Kasper Warguła <kasper@wargu.la> (https://twitter.com/KasperWargula)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kasprownik/electron-screencapture/issues"
+  },
+  "homepage": "https://github.com/kasprownik/electron-screencapture#readme",
+  "devDependencies": {
+    "babel-core": "6.4.5",
+    "babel-loader": "6.2.1",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "webpack": "1.12.12"
+  },
+  "dependencies": {
+    "array-find": "1.0.0",
+    "lodash.findindex": "4.3.0",
+    "recordrtc": "5.1.0"
+  }
+}
