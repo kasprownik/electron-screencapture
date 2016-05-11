@@ -1,6 +1,6 @@
 {
   "name": "electron-screencapture",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Library that allows to take a picture or a video from any fragment of the display",
   "main": "dist/main.js",
   "scripts": {

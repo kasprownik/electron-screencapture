@@ -1,7 +1,7 @@
 import RecordRTC from "recordrtc";
 import electron, {desktopCapturer} from "electron";
 import find from "array-find";
-import findIndex from "lodash.findindex";
+import findIndex from "lodash.findindex"
 
 /* This is NEEDED because RecordRTC is badly written */
 global.html2canvas = (canvas, obj) => {
@@ -11,7 +11,7 @@ global.html2canvas = (canvas, obj) => {
 const getStream = sourceId => {
   return new Promise((resolve, reject) => {
     desktopCapturer.getSources({types: ['screen']}, (error, sources) => {
-      if (error) {
+      if(error) {
         reject(error);
         return;
       }
@@ -103,7 +103,7 @@ const startRecording = ({canvas, video, x, y, width, height, availTop}) => {
   };
 };
 
-exports.takeScreenshot = ({x, y, width, height, sourceId}) => {
+export const takeScreenshot = ({x, y, width, height, sourceId}) => {
   const availTop = screen.availTop - getDisplay(sourceId).bounds.y;
 
   return getStream(sourceId)
@@ -116,7 +116,7 @@ exports.takeScreenshot = ({x, y, width, height, sourceId}) => {
     });
 };
 
-exports.captureVideo = ({x, y, width, height, sourceId}) => {
+export const captureVideo = ({x, y, width, height, sourceId}) => {
   const availTop = screen.availTop - getDisplay(sourceId).bounds.y;
   return getStream(sourceId)
     .then(getVideo)
